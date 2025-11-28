@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Educação Sem Fronteiras</title>
+    <link rel="stylesheet" href="/Arquivos/CSS/perfil.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html"><h4>Ambiente Estudantil Virtual</h4></a>
+    </div>
+
+    <nav>
+        <a href="index.html">Cursos</a>
+        <a href="#">Eventos</a>
+        <a href="#">Comunidade</a>
+    </nav>
+
+    <div class="user-actions">
+        <span id="bemVindoTopo"></span>
+        <button id="btnLogout">Sair</button>
+    </div>
+</header>
+
+<div class="perfil-container">
+
+    <!-- CARD ESQUERDO -->
+    <div class="card-left">
+        <img id="fotoPerfil" src="/Arquivos/IMG/default-user.png">
+
+        <h2 id="perfilNome"></h2>
+        <p id="perfilEmail" class="email"></p>
+
+        <label class="upload-btn">
+            Upload nova foto
+            <input type="file" id="uploadFoto" accept="image/*">
+        </label>
+
+        <p class="note">Máximo permitido: 1 MB</p>
+
+        <div class="joined">
+            Membro desde: <span id="perfilData"></span>
+        </div>
+    </div>
+
+    <!-- CARD DIREITO -->
+    <div class="card-right">
+
+        <div class="tabs">
+            <button class="tab active" data-tab="user">User Info</button>
+            <button class="tab" data-tab="billing">Billing Information</button>
+        </div>
+
+        <!-- ABA USER INFO -->
+        <div id="user" class="tab-content active">
+
+            <form id="formAtualizar">
+
+                <div class="form-grid">
+                    <div class="campo">
+                        <label>Nome Completo</label>
+                        <input type="text" id="editNome">
+                    </div>
+
+                    <div class="campo">
+                        <label>Senha</label>
+                        <input type="password" id="editSenha">
+                    </div>
+
+                    <div class="campo">
+                        <label>E-mail</label>
+                        <input type="email" id="editEmail">
+                    </div>
+
+                    <div class="campo">
+                        <label>Confirmar E-mail</label>
+                        <input type="email" id="editEmailConfirma">
+                    </div>
+
+                    <div class="campo">
+                        <label>Facebook Username</label>
+                        <input type="text" id="facebookUser">
+                    </div>
+
+                    <div class="campo">
+                        <label>Twitter Username</label>
+                        <input type="text" id="twitterUser">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-update">Salvar Alterações</button>
+
+            </form>
+
+        </div>
+
+        <!-- ABA BILLING -->
+        <div id="billing" class="tab-content">
+
+            <form id="formBilling">
+
+                <div class="form-grid">
+                    <div class="campo">
+                        <label>Nome no Cartão</label>
+                        <input type="text" id="nomeCartao">
+                    </div>
+
+                    <div class="campo">
+                        <label>Número do Cartão</label>
+                        <input type="text" id="numCartao">
+                    </div>
+
+                    <div class="campo">
+                        <label>Validade</label>
+                        <input type="month" id="validadeCartao">
+                    </div>
+
+                    <div class="campo">
+                        <label>CVV</label>
+                        <input type="text" id="cvvCartao">
+                    </div>
+
+                    <div class="campo">
+                        <label>Endereço de Cobrança</label>
+                        <input type="text" id="enderecoCobranca">
+                    </div>
+
+                    <div class="campo">
+                        <label>CEP</label>
+                        <input type="text" id="cepCobranca">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-update">Salvar Informações de Pagamento</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/Arquivos/JS/perfil.js"></script>
+</body>
+</html>

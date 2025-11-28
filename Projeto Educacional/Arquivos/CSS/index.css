@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a;
+  color: white;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.rodape{
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.logo a {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: white;
+}
+
+.logo a:hover{
+  color: #00bcd4;
+}
+
+nav a, .user-actions a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover, .user-actions a:hover {
+  color: #00bcd4;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 150px 60px 80px;
+  background: linear-gradient(120deg, #001f3f, #004080);
+  background-image: url('/Imagens/1 backgroud.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.genre {
+  font-size: 0.9rem;
+  color: #cce7ff;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary {
+  background: #00bcd4;
+  color: #000;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #00acc1;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid #00bcd4;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #00bcd4;
+  color: #000;
+}
+
+.now-showing {
+  padding: 60px;
+  background-color: #0f0f0f;
+}
+
+.now-showing h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #00bcd4;
+}
+
+.courses {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.courses img {
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.courses img:hover {
+  transform: scale(1.05);
+}
+
+/* ================================
+   🔵 POPUP POMODORO
+===================================*/
+#pomodoroPopup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+#pomodoroContent {
+  background: #111;
+  padding: 35px;
+  border-radius: 20px;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 188, 212, 0.5);
+  animation: popupScale 0.3s ease;
+}
+
+#pomodoroContent h2 {
+  color: #00bcd4;
+  margin-bottom: 20px;
+}
+
+#pomodoroContent label {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #cce7ff;
+  text-align: left;
+}
+
+#pomodoroContent input {
+  width: 100%;
+  padding: 10px;
+  background: #222;
+  border: 1px solid #00bcd4;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+#statusLabel {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #78e5ff;
+  font-weight: bold;
+}
+
+#timerDisplay {
+  font-size: 3.5rem;
+  margin: 20px 0;
+  color: #00bcd4;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* BOTÕES */
+.pomodoro-btn {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+.start {
+  background: #00bcd4;
+  color: #000;
+}
+
+.start:hover {
+  background: #00acc1;
+  transform: scale(1.05);
+}
+
+.reset, .close {
+  background: #333;
+  color: #fff;
+}
+
+.reset:hover, .close:hover {
+  background: #444;
+  transform: scale(1.05);
+}
+
+/* ESCONDER */
+.hidden {
+  display: none;
+}
+
+/* ===============================
+       🔵 ANIMAÇÕES
+================================*/
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popupScale {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+

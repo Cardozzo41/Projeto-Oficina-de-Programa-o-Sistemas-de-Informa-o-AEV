@@ -1,0 +1,118 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+background-color: #0a0a0a;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+color: white;
+}
+
+
+.login-container {
+background-color: #0f0f0f;
+padding: 40px;
+border-radius: 15px;
+box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
+width: 100%;
+max-width: 400px;
+text-align: center;
+}
+
+
+.login-container h2 {
+margin-bottom: 25px;
+color: #00bcd4;
+font-size: 2rem;
+}
+
+
+.login-container form {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+padding: 12px;
+border: none;
+border-radius: 8px;
+background-color: #1a1a1a;
+color: white;
+font-size: 1rem;
+outline: none;
+transition: all 0.3s ease;
+}
+
+
+.login-container input:focus {
+border: 2px solid #00bcd4;
+background-color: #141414;
+}
+
+
+.login-container button {
+background-color: #00bcd4;
+color: black;
+border: none;
+border-radius: 25px;
+padding: 12px;
+font-weight: bold;
+font-size: 1rem;
+cursor: pointer;
+transition: 0.3s ease;
+}
+
+
+.login-container button:hover {
+background-color: #00acc1;
+transform: scale(1.03);
+}
+
+
+.extra-links {
+margin-top: 20px;
+font-size: 0.9rem;
+}
+
+
+.extra-links a {
+color: #00bcd4;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+
+.extra-links a:hover {
+color: #80deea;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.campo label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.campo input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.teste{
+  text-decoration: none;
+  color: #00bcd4;
+}

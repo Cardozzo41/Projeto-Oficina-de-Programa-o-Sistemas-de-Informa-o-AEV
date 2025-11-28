@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Educação Sem Fronteira</title>
+  <link rel="stylesheet" href="/Arquivos/CSS/cadastro.css">
+ 
+</head>
+<body>
+
+  <section class="cadastro-container">
+    <div class="cadastro-box">
+      <h2><a class="teste" href="index.html">Crie sua conta</a></h2>
+
+      <form id="formCadastro" action="#" method="post">
+
+        <div class="campo">
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" required>
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="campo">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" required>
+        </div>
+
+        <div class="campo">
+          <label for="confirmar">Confirmar Senha</label>
+          <input type="password" id="confirmar" required>
+        </div>
+
+        <button type="submit" class="btn-primary">Registrar</button>
+      </form>
+
+      <p class="login-text">
+        Já tem uma conta? <a href="login.html">Faça login</a>
+      </p>
+    </div>
+  </section>
+
+   <script src="/Arquivos/JS/cadastro.js"></script>
+
+</body>
+</html>
